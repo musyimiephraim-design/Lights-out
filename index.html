@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIGHT OUT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="hero">
+        <h1>Welcome to LIGHT OUT</h1>
+        <p>Your ticket to an unforgettable experience!</p>
+    </header>
+    <main>
+        <section class="ticket-box">
+            <h2>Purchase Tickets</h2>
+            <button id="ticket-button">Buy Ticket</button>
+            <p id="success-message" style="display:none;">Ticket purchased successfully!</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2026 LIGHT OUT. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('ticket-button').onclick = function() {
+            document.getElementById('success-message').style.display = 'block';
+        };
+    </script>
+</body>
+</html>
