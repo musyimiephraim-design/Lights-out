@@ -1,39 +1,31 @@
 .hero-header {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: center;
-    padding: 50px 0;
-}
-
-.hero-header h1 {
-    font-size: 3em;
-    margin: 0;
-}
-
-.main-content {
-    background-color: #333333;
-    color: #e0e0e0;
-    padding: 20px;
-}
-
-.ticket-button {
-    background-color: #ff4081; /* vibrant accent color */
+    background: url('path/to/image.jpg') no-repeat center center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
-    padding: 15px 30px;
+    text-align: center;
+}
+
+.ticket-box {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    margin: 20px 0;
+}
+
+.button {
+    background-color: #007BFF;
+    color: white;
     border: none;
     border-radius: 5px;
-    font-size: 1.2em;
+    padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.ticket-button:hover {
-    background-color: #f50057;
-}
-
-.footer {
-    background-color: #1a1a1a;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 0;
+.button:hover {
+    background-color: #0056b3;
 }
