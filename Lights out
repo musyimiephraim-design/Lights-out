@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIGHT OUT</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: black;
+    color: white;
+}
+
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(255,0,0,0.7)),
+                url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 60px;
+    color: #ff1a1a;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 15px 30px;
+    background: red;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+}
+
+.btn.disabled {
+    background: gray;
+    pointer-events: none;
+}
+
+.ticket-box {
+    background: #111;
+    margin: 30px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.sold-out {
+    color: red;
+    font-size: 28px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: gray;
+}
+</style>
+</head>
+
+<body>
+
+<section class="hero">
+    <h1>LIGHT OUT</h1>
+    <p>13TH APRIL 2026 • Serene Gardens • 1PM</p>
+
+    <a id="ticketBtn" href="https://wa.me/254790633144?text=Hi%20I%20want%20a%20ticket%20for%20LIGHT%20OUT" class="btn">
+    GET TICKETS
+    </a>
+
+    <div id="status"></div>
+</section>
+
+<section class="ticket-box">
+    <h2>TICKETS</h2>
+    <p>🎟️ Price: KES 250</p>
+    <p id="remaining">Loading tickets...</p>
+</section>
+
+<footer>
+    <p>© 2026 LIGHT OUT • Limited Event</p>
+</footer>
+
+<script>
+let totalTickets = 40;
+
+// 👉 CHANGE THIS NUMBER MANUALLY AS PEOPLE PAY
+let ticketsSold = 0
